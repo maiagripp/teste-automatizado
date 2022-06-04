@@ -1,4 +1,4 @@
-function media(numbers){
+export function media(numbers){
     if ( ! numbers ){
         throw new Error('Por favor, informe os números')
     }
@@ -12,4 +12,4 @@ function media(numbers){
     return sum / numbers.length;
 }
 
-module.exports = media;
+//module.exports = media;

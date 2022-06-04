@@ -1,6 +1,16 @@
-const media = require('../src/media.js')
+//const media = require('../src/media.js')
+import {media} from '../src/media.js'
 
 describe('media', () => {
+
+    it.each([
+        [[10], 10],
+        [[10, 20], 15]
+    ])('fornecendo %s da %s', (entrada, saida) => {
+        const r = media(entrada);
+        expect(r).toBe(saida);
+    })
+
     it('calcula a média de um único número', () => {
       const r =  media ([ 10 ]);
       expect (r).toBe(10)
@@ -32,4 +42,6 @@ describe('media', () => {
             media(5)
         }).toThrow(/array/)
     })
+
+    it.todo('passar um array com erros gera erro')
 })
