@@ -26,4 +26,10 @@ describe('media', () => {
             media([])
         }).toThrow(/vazio/)
     })
+
+    it('passar um número gera um erro', () => {
+        expect(() => {
+            media(5)
+        }).toThrow(/array/)
+    })
 })
